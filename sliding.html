@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>sliding animation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            background: black;
+            overflow:hidden;
+            font-family: 'Fredoka One', cursive;
+        }
+        .text{
+            padding:20px;
+            color:white;
+            font-size:48px;
+            text-transform:uppercase;
+            transform: translateX(-80px) translateY(100px);
+        }
+        .line{
+            height:45px;
+            letter-spacing:3px;
+            overflow:hidden;
+            position:relative;
+        }
+        p{
+            margin:0;
+            height:52px;
+            line-height:45px;
+            transition: all ease-in-out infinite;
+        }
+        .buttons{
+            padding:10px;
+            transform: translateY(80px);
+        }
+        a{
+            text-decoration:none;
+            color:aquamarine;
+            padding:10px;
+            font-size:25px;
+        }
+        .line:nth-child(odd){
+            transform: skew(60deg, -30deg) scaleY(0.6);
+        }
+        .line:nth-child(even){
+            transform: skew(0deg, -30deg) scaleY(1.2);
+        }
+        .text p{
+            transform:translate(0, -50px);
+            animation: animate 4s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform:translate(0)
+            }
+            50%{
+                transform:translate(0,-50px);
+            }
+            100%{
+                transform:translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <div class="line">
+            <p></p>
+            <p>waterfalls tours</p>
+        </div>
+        <div class="line">
+            <p>waterfalls tours</p>
+            <p>kaieteur falls</p>
+        </div>
+        <div class="line">
+            <p>kaieteur falls</p>
+            <p>havasu falls</p>
+        </div>
+        <div class="line">
+            <p>havasu falls</p>
+            <p>wallaman falls</p>
+        </div>
+
+        <div class="line">
+            <p>wallaman falls</p>
+            <p>burney falls</p>
+        </div>
+        <div class="line">
+            <p>burney falls</p>
+            <p>manawaiopuna falls</p>
+        </div>
+        <div class="line">
+            <p>manawaiopuna falls</p>
+            <p>niagara falls</p>
+        </div>
+        <div class="line">
+            <p>niagara falls</p>
+            <p>waterfalls tours</p>
+        </div>
+    </div>
+    
+    <div class="buttons">
+        <div class="about">
+            <a href="#">about</a>
+        </div>
+        <div class="calendar">
+            <a href="#">view calendar</a>
+        </div>
+        <div class="contact">
+            <a href="#">contact</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
